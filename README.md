@@ -17,7 +17,7 @@ So on to our tasks to accomplish as we move along with this tutorial project.
 This project is also **C#** based using **DotNet Core**.
 There have been many changes to .NET. Mind you, I have been a C++, Python and C#.Net Developer. People were thrown away by .Net since it was not free. However, since I dont freelance I have never had to worry about paying. Recently though, Microsoft opened sourced .Net to a brand new version designated as **Core**. 
 
-The important part here is that AspNet and .Net have completely been reworked, trimmed out and improved. The multithreading and parallel libraries outperform java libraries and microservice creation has never been easier. On another note, not only is .NetCore an open source initiative bringing bright minds to extend and improve it, it also has Microsoft backing it. Which means you have a user base with financial backing. This will always strengthen any initiative. 
+The important part here is that AspNet and .Net have completely been reworked, trimmed out and improved. The multithreading and parallel libraries outperform java libraries and microservice creation has never been easier. On another note, not only is .NetCore an open source initiative bringing bright minds to extend and improve it, it also has Microsoft backing it. Which means you have a user base with financial backing. This will always strengthen any initiative.
 
 ### How to set up .Net Core
 First of all, go to the [DotNet Quickstart Guide](https://www.microsoft.com/net/learn/get-started/windows)
@@ -37,3 +37,22 @@ This command will find the .csproj file and will build the project and create th
 
 You can then execute `dotnet run` from the same dirctory and it will run the compiled project.
 After building, you can also drill down to the **netcoreapp2.0** directory and execute `dotnet nameOfCompiledProj.dll` in windows and *.so* for linux I believe. 
+
+### Running the project
+Assuming your dotnet is accessible. cd into the project directory of **DI.DataProcessor**. Here you should see a *.csproj* file and that is what our dotnet command will look for. You have to execute `dotnet run`. This command will do a background build of the project which can also be done individually as `dotnet build` and then it will proceed to run the actual application. Your output of the application should be something similar to this:
+```
+----- Data Processing APP -----
+%% Loaded DataAccessorA %%
+Loaded TestServiceA with AccessorA hash=26765710
+Fetched Sample data from A This is the sample data from DataAccessorA with id=12
+345
+%% Disposing DataAccessorA %%
+%% Disposing TestServiceA %%
+%% Loaded DataAccessorB %%
+Loaded TestServiceB with AccessorB hash=34826618
+Fetched Sample data from B Sample Data From DataAccessorB with id=f6a554a8-73e0-
+4621-97a8-dc425e158064
+%% Disposing DataAccessorB %%
+%% Disposing TestServiceB %%
+```
+The outputs basically show us the order in which the DI framework "injects" and creates the required dependencies at runtime.
