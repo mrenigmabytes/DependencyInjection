@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling.Logging.NetCore" Version="6.0.1312" />
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling.NetCore" Version="6.0.1312" />
+    <PackageReference Include="Unity.NetCore" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DI.Common\DI.Common.csproj" />
+    <ProjectReference Include="..\DI.DataLayer\DI.DataLayer.csproj" />
+    <ProjectReference Include="..\DI.ServiceLayer\DI.ServiceLayer.csproj" />
+  </ItemGroup>
+
+</Project>
