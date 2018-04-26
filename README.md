@@ -5,8 +5,8 @@ We will be using vanilla C# and .Net Core and the only external we will bring in
 
 So on to our tasks to accomplish as we move along with this tutorial project.
 
-- [ ] NuGet Enterprise Library Components (Unity Dependency Injection and Exception Handling).
-- [ ] Create our Dependency Injection classes. **DIComponents** folder.
+- [x] NuGet Enterprise Library Components (Unity Dependency Injection and Exception Handling).
+- [x] Create our Dependency Injection classes. **DI.Common** folder.
 - [ ] Create TestClasses for our DI Components.
 - [ ] Create Unit Test Project.
 - [ ] Create Exception Policy Framework.
@@ -25,7 +25,7 @@ Choose the appropriate OS (Windows, Linux, OS) and follow the **VERY EASY INSTRU
 
 You can use VSCode which is free and just install the C# Extension.
 Building this project is quite simple.
-Navigate to the directory where the .cproj file is located and execute:
+Navigate to the directory **DI.DataProcessor** where the .cproj file is located and execute:
 
 `dotnet build`
 You should see the build results. If you have build errors, let me know as you might not have your system configured properly.
